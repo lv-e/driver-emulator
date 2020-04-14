@@ -37,8 +37,6 @@ commit(){
 
 publish_docker(){
 
-    commit
-    
     while true; do
 
         echo "will now build and publish a new emulator docker image."
@@ -80,7 +78,7 @@ run_sandbox(){
         read -p "choose one: " opt; echo "--"
 
         case $opt in
-            1 ) publish_docker; break;;
+            1 ) commit; publish_docker; break;;
             2 ) run_sandbox; break;;
             3 ) commit; break;;
             * ) echo "ok! bye."; exit;;
