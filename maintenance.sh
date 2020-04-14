@@ -25,7 +25,7 @@ commit(){
             read commit_message; echo "--"
 
             git add .
-            git commit --allow-empty -m '${commit_message}'
+            git commit --allow-empty -m "$commit_message"
             echo "there you go!"
             break;;
 
