@@ -6,7 +6,7 @@ echo "hi! this is > lv emulator driver < 's maintenance script"
 
 ## available commands
 
-commit(){
+publish_docker(){
 
     if [[ `git status --porcelain` ]]; then
         echo "you do have local changes!"
@@ -33,9 +33,6 @@ commit(){
             echo "ok! bye."
             exit;;
     esac
-}
-
-publish_docker(){
 
     while true; do
 
@@ -74,13 +71,11 @@ run_sandbox(){
         echo "available options are:"
         echo " 1) publish docker image"
         echo " 2) run as sandbox"
-        echo " 3) just make a commit"
         read -p "choose one: " opt; echo "--"
 
         case $opt in
-            1 ) commit; publish_docker; break;;
+            1 ) publish_docker; break;;
             2 ) run_sandbox; break;;
-            3 ) commit; break;;
             * ) echo "ok! bye."; exit;;
         esac
 done
