@@ -8,7 +8,8 @@ cppsrc = $(wildcard *.cpp) \
 
 obj = $(csrc:.c=.o) $(cppsrc:.cpp=.o)
 
-COMPILER = clang
+CXXFLAGS = -std=c++11
+COMPILER = gcc
 
 game: $(obj)
 	$(COMPILER) -o $@ $^ -I.
