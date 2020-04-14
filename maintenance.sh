@@ -11,7 +11,7 @@ commit(){
     if [[ `git status --porcelain` ]]; then
         echo "you do have local changes!"
         echo "will now commit before publishing."
-     else
+    else
         echo "you don't have local changes. do you really need a new version?"
         echo "anyway, will now commit and then publish."
     fi
