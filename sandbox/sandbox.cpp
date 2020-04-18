@@ -2,7 +2,9 @@
 #include "driver.h"
 
 int main(){
+    
     printf("hello from driver\n");
-    driver_draw_hline(0, NULL, 0);
+    run();
+    
     return 0;
 }

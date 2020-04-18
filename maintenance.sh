@@ -10,10 +10,10 @@ commit(){
 
     if [[ `git status --porcelain` ]]; then
         echo 'you do have local changes!'
-        echo 'will now commit before publishing.'
+        echo 'will now commit after publishing.'
     else
         echo 'you don''t have local changes. do you really need a new version?'
-        echo 'anyway, will now commit and then publish.'
+        echo 'anyway, will now commit after publishing.'
     fi
 
     read -p 'it''s that okay (y/n)? ' yn; echo '--'
