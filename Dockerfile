@@ -5,5 +5,5 @@ FROM lvedock/lve_runtime
 RUN apk add --update g++ make
 
 # copy files from source to 
-COPY src /lv/source/lv-driver
+COPY lv-driver /lv/source/lv-driver
 COPY scripts /lv/scripts
