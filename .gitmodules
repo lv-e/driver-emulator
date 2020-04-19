@@ -1,0 +1,3 @@
+[submodule "shallow-engine"]
+	path = shallow-engine
+	url = git@github.com:lv-e/engine.git

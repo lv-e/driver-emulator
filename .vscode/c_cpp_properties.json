@@ -4,10 +4,13 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/src/**",
-                "${workspaceFolder}/sandbox/**"
+                "${workspaceFolder}/src/",
+                "${workspaceFolder}/shallow-engine/src/",
+                "${workspaceFolder}/sandbox/"
             ],
-            "defines": [],
+            "defines": [
+                "DRIVER_SANDBOX=1"
+            ],
             "macFrameworkPath": [
                 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
             ],

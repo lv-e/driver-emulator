@@ -2,8 +2,11 @@
 extern "C" {
 #endif
 
+// simulator interface
+void startRender();
+
+// lv required
 void draw_hline(unsigned int line, unsigned int* buffer, unsigned int size);
-void run();
 
 #ifdef __cplusplus
 }

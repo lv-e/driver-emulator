@@ -4,15 +4,11 @@
 #include <stdio.h>
 #endif
 
-// 8/16/32bits Integers definitions
-#ifndef LV_PRIMITIVES
-#define LV_PRIMITIVES
-typedef signed char int8_t;
-typedef short int   int16_t;
-typedef int         int32_t;
-typedef unsigned char       uint8_t;
-typedef unsigned short int  uint16_t;
-typedef unsigned int        uint32_t;
+#define DRIVER_SCREEN_WIDTH  220
+#define DRIVER_SCREEN_HEIGHT 176
+
+#ifdef DRIVER_SANDBOX
+#include "engine.h"
 #endif
 
 #include "render.h"
