@@ -6,22 +6,22 @@ cppsrc = $(wildcard *.cpp) \
          $(wildcard lv-engine/*.cpp) \
          $(wildcard lv-driver/*.cpp)
 
-obj 		= $(csrc:.c=.o) $(cppsrc:.cpp=.o)
-flags 		= -DLV_USE_STDIO=1
-includes 	= -I./
+obj             = $(csrc:.c=.o) $(cppsrc:.cpp=.o)
+flags           = -DLV_USE_STDIO=1
+includes        = -I./
 
-CXXFLAGS 	= -std=c++11 $(flags) $(includes)
-CFLAGS 	 	= $(flags) $(includes)
+CXXFLAGS        = -std=c++11 $(flags) $(includes)
+CFLAGS          = $(flags) $(includes)
 
-CC 		= gcc
-CXX 		= g++
-LINKER 		= g++
+CC              = gcc
+CXX             = g++
+LINKER          = g++
 
 game: $(obj)
-        $(LINKER) $(flags) $(includes) -o ./bin/$@ $^ -I.
+	$(LINKER) $(flags) $(includes) -o /lv/bin/$@ $^ -I.
 
 .PHONY:
-        clean
-
+	clean
+	
 clean:
-        rm -f $(obj) game
+	rm -f $(obj) game
