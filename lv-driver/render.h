@@ -5,7 +5,7 @@ extern "C" {
 // simulator interface
 void startRender();
 
-// lv required
+// lv required implementation
 void draw_hline(unsigned int line, unsigned int* buffer, unsigned int size);
 
 #ifdef __cplusplus

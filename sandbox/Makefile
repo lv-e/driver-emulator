@@ -1,15 +1,15 @@
 csrc = $(wildcard *.c) \
-       $(wildcard src/*.c) \
-	   $(wildcard shallow-engine/src/*.c) \
+       $(wildcard lv-driver/**/*.c) \
+	   $(wildcard shallow-engine/**/*.c) \
 	   $(wildcard sandbox/*.c) 
 
 cppsrc = $(wildcard *.cpp) \
-        $(wildcard src/*.cpp) \
-		$(wildcard sandbox/*.cpp) 
+        $(wildcard lv-driver/**/*.cpp) \
+		$(wildcard shallow-engine/**/*.cpp) 
 
 obj = $(csrc:.c=.o) $(cppsrc:.cpp=.o)
 flags = -DDRIVER_SANDBOX=1 -DLV_USE_STDIO=1
-includes = -I./src -I./shallow-engine/src
+includes = -I./ -I./shallow-engine
 
 CXXFLAGS = -std=c++11 $(flags) $(includes)
 CFLAGS 	 = $(flags) $(includes)

@@ -67,6 +67,12 @@ run_sandbox(){
     ./sandbox/game
 }
 
+update_engine(){
+    echo 'Asking for git to update engine:'
+    git submodule update --remote -q
+    echo 'Done! Shine brand new engine!'
+}
+
 ## what should we do?
 
  while true; do
@@ -75,12 +81,14 @@ run_sandbox(){
         echo " 1) publish docker image"
         echo " 2) run as sandbox"
         echo " 3) just make a commit"
+        echo " 4) update engine"
         read -p "choose one: " opt; echo "--"
 
         case $opt in
             1 ) publish_docker; commit; break;;
             2 ) run_sandbox; break;;
             3 ) commit; break;;
+            4 ) update_engine; break;;
             * ) echo "ok! bye."; exit;;
         esac
 done

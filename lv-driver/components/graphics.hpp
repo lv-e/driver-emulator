@@ -99,7 +99,9 @@ struct BMP {
     void set_pixel(uint32_t x, uint32_t y, uint8_t R, uint8_t G, uint8_t B) {
 
         if (x > (uint32_t) info_header.width || y > (uint32_t) info_header.height) {
+            #ifdef LV_USE_STDIO
             printf("drawing at: x=%d y=%d", x, y);
+            #endif
             throw std::runtime_error("The pixel is outside bounds");
         }
 

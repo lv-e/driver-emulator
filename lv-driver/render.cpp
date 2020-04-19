@@ -1,13 +1,12 @@
-#include "render.h"
-#include "graphics.hpp"
-#include "io.hpp"
-#include "pad.hpp"
-
-#ifdef DRIVER_SANDBOX
-#include "engine.h"
-#endif
 
 #include <stdio.h>
+
+#include "lv-driver/render.h"
+#include "lv-driver/components/graphics.hpp"
+#include "lv-driver/components/io.hpp"
+#include "lv-driver/components/pad.hpp"
+
+#include "lv-engine/engine.h"
 
 //Screen dimension constants
 const int SCREEN_WIDTH  = DRIVER_SCREEN_WIDTH;

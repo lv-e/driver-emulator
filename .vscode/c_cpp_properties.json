@@ -3,9 +3,8 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}/src/",
-                "${workspaceFolder}/shallow-engine/src/",
+                "${workspaceFolder}/",
+                "${workspaceFolder}/shallow-engine/",
                 "${workspaceFolder}/sandbox/"
             ],
             "defines": [
