@@ -1,6 +1,8 @@
 #!/bin/sh
 
-echo "now build for lv-emulator"
+echo "now build for lv-emulator at /lv/source"
+
+cd /lv/source
 make -f /lv/scripts/build/Makefile
 
 echo "done! cleaning artifacts..."
