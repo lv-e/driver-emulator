@@ -17,7 +17,7 @@ BMP frame_buffer(SCREEN_WIDTH, SCREEN_HEIGHT);
 void draw_hline(unsigned int line, unsigned int* buffer, unsigned int size){
     for(unsigned int x = 0; x < size; x++) {
         unsigned int color = buffer[x];
-        frame_buffer.set_pixel(((d) + x)%SCREEN_WIDTH, line,
+        frame_buffer.set_pixel(x, line,
             ((color >> 16) & 0xFF),
             ((color >> 8)  & 0xFF),
             ((color)       & 0xFF));

@@ -1,10 +1,10 @@
-csrc = $(wildcard *.c) \
-       $(wildcard lv-engine/*.c) \
-       $(wildcard lv-driver/*.c)
+csrc = $(wildcard /lv/source/*.c) \
+       $(wildcard /lv/source/lv-engine/*.c) \
+       $(wildcard /lv/source/lv-driver/*.c)
 
-cppsrc = $(wildcard *.cpp) \
-        $(wildcard lv-engine/*.cpp) \
-        $(wildcard lv-driver/*.cpp)
+cppsrc = $(wildcard /lv/source/*.cpp) \
+         $(wildcard /lv/source/lv-engine/*.cpp) \
+         $(wildcard /lv/source/lv-driver/*.cpp)
 
 obj = $(csrc:.c=.o) $(cppsrc:.cpp=.o)
 
@@ -12,7 +12,7 @@ CXXFLAGS = -std=c++11
 COMPILER = gcc
 
 game: $(obj)
-	$(COMPILER) -o $@ $^ -I.
+	$(COMPILER) -o /lv/bin/$@ $^ -I.
 
 .PHONY:
 	clean
