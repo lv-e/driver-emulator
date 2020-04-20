@@ -1,3 +1,4 @@
+#pragma once
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -6,7 +7,7 @@ extern "C" {
 void startRender();
 
 // lv required implementation
-void draw_hline(unsigned int line, unsigned int* buffer, unsigned int size);
+void drawHLine(unsigned int line, unsigned int* buffer, unsigned int size);
 
 #ifdef __cplusplus
 }
