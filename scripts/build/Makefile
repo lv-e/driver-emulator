@@ -1,10 +1,16 @@
 csrc = $(wildcard *.c) \
+	   $(wildcard */*.cpp) \
        $(wildcard lv-engine/*.c) \
-       $(wildcard lv-driver/*.c)
+	   $(wildcard lv-engine/**/*.c) \
+       $(wildcard lv-driver/*.c) \
+	   $(wildcard lv-driver/**/*.c) 
 
 cppsrc = $(wildcard *.cpp) \
+		 $(wildcard **/*.cpp) \
          $(wildcard lv-engine/*.cpp) \
-         $(wildcard lv-driver/*.cpp)
+		 $(wildcard lv-engine/**/*.cpp) \
+         $(wildcard lv-driver/*.cpp) \
+		 $(wildcard lv-driver/**/*.c)
 
 obj             = $(csrc:.c=.o) $(cppsrc:.cpp=.o)
 flags           = -DLV_USE_STDIO=1
