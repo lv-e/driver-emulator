@@ -24,7 +24,7 @@ CXX             = g++
 LINKER          = g++
 
 game: $(obj)
-	$(LINKER) $(flags) $(includes) -lc++ -o /lv/bin/$@ $^ -I.
+	$(LINKER) $(flags) $(includes) -o /lv/bin/$@ $^ -I.
 
 .PHONY:
 	clean
