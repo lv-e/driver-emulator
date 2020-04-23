@@ -1,5 +1,5 @@
 csrc = $(wildcard *.c) \
-	   $(wildcard */*.cpp) \
+	   $(wildcard **/*.c) \
        $(wildcard lv-engine/*.c) \
 	   $(wildcard lv-engine/**/*.c) \
        $(wildcard lv-driver/*.c) \
@@ -30,4 +30,4 @@ game: $(obj)
 	clean
 	
 clean:
-	rm -f $(obj) game
+	rm -f $(obj)
